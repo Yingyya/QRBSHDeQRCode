@@ -1,0 +1,31 @@
+## 二维码解析 无调用API接口
+## Author: Yingy
+## 慢的原因的腾讯图床问题 自己提供图片链接很快
+
+二维码解析 ?(.*)
+如果:%括号1%!=
+正在解析……
+$发送$
+R:$BSH QRCodeDecode.java decode %括号1%$
+如果:%R%==
+解析失败……
+返回
+如果尾
+解析成功\r\n
+结果：%R%
+返回
+如果尾
+如果:%IMG0%==
+请附带图片……
+返回
+如果尾
+M:$正则 € %IMG0%€/.*-|[^\dA-Z]€$
+正在解析……
+$发送$
+R:$BSH QRCodeDecode.java decode https://gchat.qpic.cn/gchatpic_new/0/0-0-%M%/0$
+如果:%R%==
+解析失败……
+返回
+如果尾
+解析成功\r\n
+结果：%R%
