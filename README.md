@@ -1,6 +1,6 @@
 <center><h3>BSH 二维码解码</h3></center>
 
-本项目使用了(Google Zxing)[https://github.com/zxing/zxing]作为主要库
+本项目使用了[Google Zxing](https://github.com/zxing/zxing)作为主要库
 
 ### QRCodeDecode.java 代码
 ```java
